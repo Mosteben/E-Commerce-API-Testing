@@ -1,0 +1,1166 @@
+{
+	"id": "118edcc1-4b7c-4994-8d77-006d3e78cbd2",
+	"name": "e-commerce",
+	"timestamp": "2024-10-10T11:44:15.069Z",
+	"collection_id": "38910005-e071bd21-9319-47ca-83f5-72b804ce510c",
+	"folder_id": 0,
+	"environment_id": "38910005-1a5ac1f1-8bc2-466f-867d-9811ca9bca6a",
+	"totalPass": 76,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-10-10T11:44:06.104Z",
+	"totalFail": 4,
+	"results": [
+		{
+			"id": "adc79d82-a9a1-4361-9bbc-882574f51118",
+			"name": "Get all products",
+			"url": "https://jsonplaceholder.typicode.com/products",
+			"time": 152,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields": true,
+				"Price is a positive number": true,
+				"Response is an array with at least one element": true,
+				"Title is a non-empty string and ID is a non-negative integer": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Price is a positive number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is an array with at least one element": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Title is a non-empty string and ID is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				152
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields": true,
+					"Price is a positive number": true,
+					"Response is an array with at least one element": true,
+					"Title is a non-empty string and ID is a non-negative integer": true
+				}
+			]
+		},
+		{
+			"id": "df09781b-9e97-4ef7-8e08-41520cdffcbf",
+			"name": "Get a single product",
+			"url": "https://fakestoreapi.com/products/1",
+			"time": 454,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields": true,
+				"Price is a non-negative number": true,
+				"Rating object contains keys 'rate' and 'count'": true,
+				"Image URL is in a valid format": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Price is a non-negative number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Rating object contains keys 'rate' and 'count'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Image URL is in a valid format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				454
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields": true,
+					"Price is a non-negative number": true,
+					"Rating object contains keys 'rate' and 'count'": true,
+					"Image URL is in a valid format": true
+				}
+			]
+		},
+		{
+			"id": "5865640c-5c65-4ec0-a1a0-b4a6d7cc5bfa",
+			"name": "Limit results",
+			"url": "https://fakestoreapi.com/products?limit=3",
+			"time": 130,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields": true,
+				"Price is a positive number for all products": true,
+				"Verify that the response contains at least 3 products": true,
+				"Rating object has properties 'rate' and 'count'": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Price is a positive number for all products": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that the response contains at least 3 products": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Rating object has properties 'rate' and 'count'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				130
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields": true,
+					"Price is a positive number for all products": true,
+					"Verify that the response contains at least 3 products": true,
+					"Rating object has properties 'rate' and 'count'": true
+				}
+			]
+		},
+		{
+			"id": "ca16859f-78da-4910-a498-e1c104b5ebcd",
+			"name": "Sort results",
+			"url": "https://fakestoreapi.com/products?sort=desc",
+			"time": 123,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type header is application/json": true,
+				"Response has the required fields": true,
+				"Price is a non-negative number": true,
+				"Rating object contains keys 'rate' and 'count'": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Price is a non-negative number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Rating object contains keys 'rate' and 'count'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				123
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type header is application/json": true,
+					"Response has the required fields": true,
+					"Price is a non-negative number": true,
+					"Rating object contains keys 'rate' and 'count'": true
+				}
+			]
+		},
+		{
+			"id": "4ca9f207-68fd-4729-9e42-7e18b35143b3",
+			"name": "Get all categories",
+			"url": "https://fakestoreapi.com/products/categories",
+			"time": 119,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response must have the required Content-Type header with value 'application/json'": true,
+				"Response body is an array": true,
+				"Response array is not empty": true,
+				"Each category in the array is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response must have the required Content-Type header with value 'application/json'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body is an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response array is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Each category in the array is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				119
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response must have the required Content-Type header with value 'application/json'": true,
+					"Response body is an array": true,
+					"Response array is not empty": true,
+					"Each category in the array is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "ab882b97-0e39-4423-98b9-fa61d5fc4226",
+			"name": "Get products in a specific category",
+			"url": "https://fakestoreapi.com/products/category/jewelery",
+			"time": 224,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type header is application/json": true,
+				"Validate the product object": true,
+				"Price is a non-negative number": true,
+				"Rating object is present and contains expected properties": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the product object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Price is a non-negative number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Rating object is present and contains expected properties": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				224
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type header is application/json": true,
+					"Validate the product object": true,
+					"Price is a non-negative number": true,
+					"Rating object is present and contains expected properties": true
+				}
+			]
+		},
+		{
+			"id": "f0899e7f-bebb-4980-a142-028d6aed2a69",
+			"name": "Get products in a specific category use limit and sort",
+			"url": "https://fakestoreapi.com/products/category/jewelery?sort=desc&limit=2",
+			"time": 225,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type header is application/json": true,
+				"Validate the product object": true,
+				"Price is a non-negative number": true,
+				"Rating object contains rate and count properties": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the product object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Price is a non-negative number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Rating object contains rate and count properties": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				225
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type header is application/json": true,
+					"Validate the product object": true,
+					"Price is a non-negative number": true,
+					"Rating object contains rate and count properties": true
+				}
+			]
+		},
+		{
+			"id": "6ce01d58-690d-4902-b495-0e59cec54f55",
+			"name": "Add new product",
+			"url": "https://fakestoreapi.com/products",
+			"time": 120,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type header is application/json": true,
+				"Response has the required fields": true,
+				"Price is a non-negative number": true,
+				"Id is a non-negative integer": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Price is a non-negative number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				120
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type header is application/json": true,
+					"Response has the required fields": true,
+					"Price is a non-negative number": true,
+					"Id is a non-negative integer": true
+				}
+			]
+		},
+		{
+			"id": "caa0d370-2af9-43b3-9b8c-01d314e6a93d",
+			"name": "Update a product",
+			"url": "https://fakestoreapi.com/products/7",
+			"time": 124,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type header is application/json": true,
+				"Response has the required fields": true,
+				"Price is a non-negative number": true,
+				"Id is a non-negative integer": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Price is a non-negative number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				124
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type header is application/json": true,
+					"Response has the required fields": true,
+					"Price is a non-negative number": true,
+					"Id is a non-negative integer": true
+				}
+			]
+		},
+		{
+			"id": "6f94e580-e9a8-43d7-981e-334eaefc8b93",
+			"name": "Update a product Patch",
+			"url": "https://fakestoreapi.com/products/7",
+			"time": 133,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields": true,
+				"Price is a non-negative number": true,
+				"Image URL is in a valid format": false,
+				"Category is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Price is a non-negative number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Image URL is in a valid format": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Category is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				133
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields": true,
+					"Price is a non-negative number": true,
+					"Image URL is in a valid format": false,
+					"Category is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "60f030d2-adf6-4ef9-b9d2-3778582bebe8",
+			"name": "New Request",
+			"url": "https://fakestoreapi.com/products/6",
+			"time": 225,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type is application/json": true,
+				"Id is a non-negative integer": true,
+				"Title is a non-empty string, Price is a non-negative number, and Description is a non-empty string": true,
+				"Category, image, and rating fields are present in the response": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Title is a non-empty string, Price is a non-negative number, and Description is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Category, image, and rating fields are present in the response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				225
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type is application/json": true,
+					"Id is a non-negative integer": true,
+					"Title is a non-empty string, Price is a non-negative number, and Description is a non-empty string": true,
+					"Category, image, and rating fields are present in the response": true
+				}
+			]
+		},
+		{
+			"id": "c6ee79c0-7532-4a3b-83f6-570e2e45c75f",
+			"name": "User login",
+			"url": "https://fakestoreapi.com/auth/login",
+			"time": 225,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields": true,
+				"Token is a non-empty string": true,
+				"Content-Type header is application/json": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Token is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				225
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields": true,
+					"Token is a non-empty string": true,
+					"Content-Type header is application/json": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "672872ec-41e0-4691-9885-af26933cfc42",
+			"name": "Get all carts",
+			"url": "https://fakestoreapi.com/carts",
+			"time": 305,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields": true,
+				"Date is in a valid date format": false,
+				"Products array is present and contains expected number of elements": true,
+				"Validate that productId and quantity in products array are non-negative integers": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Date is in a valid date format": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Products array is present and contains expected number of elements": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate that productId and quantity in products array are non-negative integers": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				305
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields": true,
+					"Date is in a valid date format": false,
+					"Products array is present and contains expected number of elements": true,
+					"Validate that productId and quantity in products array are non-negative integers": true
+				}
+			]
+		},
+		{
+			"id": "3a7c702f-8cef-443a-9be2-be41ff453adc",
+			"name": "Get a single cart",
+			"url": "https://fakestoreapi.com/carts/5",
+			"time": 222,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type header is application/json": true,
+				"Id and userId fields should exist and be of type number": true,
+				"Date is in a valid date format": false,
+				"Products array is present and contains expected number of elements": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id and userId fields should exist and be of type number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Date is in a valid date format": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Products array is present and contains expected number of elements": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				222
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type header is application/json": true,
+					"Id and userId fields should exist and be of type number": true,
+					"Date is in a valid date format": false,
+					"Products array is present and contains expected number of elements": true
+				}
+			]
+		},
+		{
+			"id": "4c9e2406-2a2d-4d0b-a64c-11e783e3df45",
+			"name": "Limit results",
+			"url": "https://fakestoreapi.com/carts?limit=5",
+			"time": 230,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type header is application/json": true,
+				"Validate the cart object": true,
+				"Validate the products array": true,
+				"Date is in a valid date format": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the cart object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the products array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Date is in a valid date format": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				230
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type header is application/json": true,
+					"Validate the cart object": true,
+					"Validate the products array": true,
+					"Date is in a valid date format": false
+				}
+			]
+		},
+		{
+			"id": "47e4fcb9-2961-45ba-8385-73f53c8951d7",
+			"name": "Sort results",
+			"url": "https://fakestoreapi.com/carts?sort=desc",
+			"time": 260,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content type is application/json": true,
+				"Validate the structure of the response object": true,
+				"Date field should exist and be in string format": true,
+				"Products array should exist and be an array of objects": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the structure of the response object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Date field should exist and be in string format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Products array should exist and be an array of objects": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				260
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content type is application/json": true,
+					"Validate the structure of the response object": true,
+					"Date field should exist and be in string format": true,
+					"Products array should exist and be an array of objects": true
+				}
+			]
+		},
+		{
+			"id": "647a99fa-845a-4db7-ab2e-a4653578f684",
+			"name": "Get carts in a date range",
+			"url": "https://fakestoreapi.com/carts/startdate=2019-12-10&enddate=2020-10-10",
+			"time": 182,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				182
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ae590912-37b2-4e5b-9abc-9b8552530aed",
+			"name": "Get user carts",
+			"url": "https://fakestoreapi.com/carts/user/2",
+			"time": 264,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				264
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b340948d-34e1-427b-bb02-dcee3778a146",
+			"name": "Add a new product",
+			"url": "https://fakestoreapi.com/carts",
+			"time": 573,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				573
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "05983eb5-b97b-4339-9418-a0afa9b534dc",
+			"name": "Update a product",
+			"url": "https://fakestoreapi.com/carts/7",
+			"time": 136,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				136
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5b751d12-6e68-407d-abd0-ef07222bf7d3",
+			"name": "Delete a cart",
+			"url": "https://fakestoreapi.com/carts/6",
+			"time": 214,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				214
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c98f1694-c574-4a5f-8de3-ddbc3d55fbc3",
+			"name": "Get all users",
+			"url": "https://fakestoreapi.com/users",
+			"time": 229,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				229
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3a7933a7-f44f-4570-b289-15eddd3b31f8",
+			"name": "Get a single user",
+			"url": "https://fakestoreapi.com/users/1",
+			"time": 303,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				303
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2ee1b558-e75c-439c-b769-070cdf1dd584",
+			"name": "Limit results",
+			"url": "https://fakestoreapi.com/users?limit=5",
+			"time": 229,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				229
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5aaac7a3-8552-454c-a523-d0b218628196",
+			"name": "Sort results",
+			"url": "https://fakestoreapi.com/users?sort=desc",
+			"time": 224,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				224
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b95bbbe5-bb23-4888-bf57-d93355ff868c",
+			"name": "Add a new user",
+			"url": "https://fakestoreapi.com/users",
+			"time": 230,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				230
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b0c78129-fd9a-4a5a-b3da-05c61ae1254f",
+			"name": "Update a users",
+			"url": "https://fakestoreapi.com/users/7",
+			"time": 131,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				131
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "67527b3a-3322-421c-8188-d93de9fb67fe",
+			"name": "Delete a user",
+			"url": "https://fakestoreapi.com/users/6",
+			"time": 219,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				219
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 6205,
+	"collection": {
+		"requests": [
+			{
+				"id": "adc79d82-a9a1-4361-9bbc-882574f51118",
+				"method": "GET"
+			},
+			{
+				"id": "df09781b-9e97-4ef7-8e08-41520cdffcbf",
+				"method": "GET"
+			},
+			{
+				"id": "5865640c-5c65-4ec0-a1a0-b4a6d7cc5bfa",
+				"method": "GET"
+			},
+			{
+				"id": "ca16859f-78da-4910-a498-e1c104b5ebcd",
+				"method": "GET"
+			},
+			{
+				"id": "4ca9f207-68fd-4729-9e42-7e18b35143b3",
+				"method": "GET"
+			},
+			{
+				"id": "ab882b97-0e39-4423-98b9-fa61d5fc4226",
+				"method": "GET"
+			},
+			{
+				"id": "f0899e7f-bebb-4980-a142-028d6aed2a69",
+				"method": "GET"
+			},
+			{
+				"id": "6ce01d58-690d-4902-b495-0e59cec54f55",
+				"method": "POST"
+			},
+			{
+				"id": "caa0d370-2af9-43b3-9b8c-01d314e6a93d",
+				"method": "PUT"
+			},
+			{
+				"id": "6f94e580-e9a8-43d7-981e-334eaefc8b93",
+				"method": "PATCH"
+			},
+			{
+				"id": "60f030d2-adf6-4ef9-b9d2-3778582bebe8",
+				"method": "DELETE"
+			},
+			{
+				"id": "c6ee79c0-7532-4a3b-83f6-570e2e45c75f",
+				"method": "POST"
+			},
+			{
+				"id": "672872ec-41e0-4691-9885-af26933cfc42",
+				"method": "GET"
+			},
+			{
+				"id": "3a7c702f-8cef-443a-9be2-be41ff453adc",
+				"method": "GET"
+			},
+			{
+				"id": "4c9e2406-2a2d-4d0b-a64c-11e783e3df45",
+				"method": "GET"
+			},
+			{
+				"id": "47e4fcb9-2961-45ba-8385-73f53c8951d7",
+				"method": "GET"
+			},
+			{
+				"id": "647a99fa-845a-4db7-ab2e-a4653578f684",
+				"method": "GET"
+			},
+			{
+				"id": "ae590912-37b2-4e5b-9abc-9b8552530aed",
+				"method": "GET"
+			},
+			{
+				"id": "b340948d-34e1-427b-bb02-dcee3778a146",
+				"method": "POST"
+			},
+			{
+				"id": "05983eb5-b97b-4339-9418-a0afa9b534dc",
+				"method": "PUT"
+			},
+			{
+				"id": "5b751d12-6e68-407d-abd0-ef07222bf7d3",
+				"method": "DELETE"
+			},
+			{
+				"id": "c98f1694-c574-4a5f-8de3-ddbc3d55fbc3",
+				"method": "GET"
+			},
+			{
+				"id": "3a7933a7-f44f-4570-b289-15eddd3b31f8",
+				"method": "GET"
+			},
+			{
+				"id": "2ee1b558-e75c-439c-b769-070cdf1dd584",
+				"method": "GET"
+			},
+			{
+				"id": "5aaac7a3-8552-454c-a523-d0b218628196",
+				"method": "GET"
+			},
+			{
+				"id": "b95bbbe5-bb23-4888-bf57-d93355ff868c",
+				"method": "POST"
+			},
+			{
+				"id": "b0c78129-fd9a-4a5a-b3da-05c61ae1254f",
+				"method": "PUT"
+			},
+			{
+				"id": "67527b3a-3322-421c-8188-d93de9fb67fe",
+				"method": "DELETE"
+			}
+		]
+	}
+}
