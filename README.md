@@ -18,5 +18,5 @@ The Postman collections are included in the `/postman` directory:
 
 1. **Clone the Repository**:
    ```bash
-   git clone 
+   git clone https://github.com/Mosteben/E-Commerce-API-Testing.git
    cd E-Commerce-API-Testing
